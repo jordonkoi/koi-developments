@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Legal – SunFlex</title>
+  <title>Koi Developments</title>
 
   <style>
     * {
@@ -19,61 +19,64 @@
     }
 
     main {
-      max-width: 760px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 48px 20px 64px;
+      padding: 56px 20px 72px;
     }
 
     h1 {
-      font-size: 28px;
-      margin-top: 0;
-      margin-bottom: 12px;
-      font-weight: 600;
+      font-size: 34px;
+      margin: 0 0 10px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
     }
 
-    p {
-      font-size: 15px;
+    .subtitle {
+      font-size: 16px;
       color: #333;
-      margin-bottom: 24px;
+      margin: 0 0 28px;
     }
 
-    .links {
+    .apps {
       display: flex;
       flex-direction: column;
       gap: 12px;
-      margin-top: 24px;
-      margin-bottom: 32px;
+      margin-top: 16px;
     }
 
-    .link-button {
-      display: inline-block;
-      padding: 14px 16px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
+    .app-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 18px;
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
       text-decoration: none;
       color: #111;
-      font-size: 15px;
-      font-weight: 500;
       transition: background 0.15s ease, border-color 0.15s ease;
     }
 
-    .link-button:hover {
+    .app-card:hover {
       background: #f7f7f7;
-      border-color: #ccc;
+      border-color: #dcdcdc;
     }
 
-    .contact {
+    .app-title {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 2px;
+    }
+
+    .app-desc {
       font-size: 14px;
       color: #555;
+      margin: 0;
     }
 
-    .contact a {
+    .app-link {
+      font-size: 14px;
       color: #0066cc;
-      text-decoration: none;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
     }
 
     footer {
@@ -86,39 +89,47 @@
 
     @media (max-width: 480px) {
       main {
-        padding: 32px 16px 48px;
+        padding: 40px 16px 56px;
       }
 
       h1 {
-        font-size: 24px;
+        font-size: 28px;
+      }
+
+      .app-card {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
 </head>
 
 <body>
-
   <main>
-    <h1>SunFlex – Legal</h1>
+    <h1>Koi Developments</h1>
+    <p class="subtitle">Independent apps and experiences built with care.</p>
 
-    <p>
-      This page provides legal and informational documents related to the SunFlex application.
-    </p>
+    <div class="apps">
+      <a class="app-card" href="/momento/">
+        <div>
+          <p class="app-title">Momento</p>
+          <p class="app-desc">Countdown tracker and widgets for life’s moments.</p>
+        </div>
+        <div class="app-link">Open →</div>
+      </a>
 
-    <div class="links">
-      <a class="link-button" href="privacy.html">Privacy Policy</a>
-      <a class="link-button" href="terms.html">Terms of Use</a>
-      <a class="link-button" href="attributions.html">Attributions</a>
-    </div>
-
-    <div class="contact">
-      Contact: <a href="mailto:contact@safetotan.com">contact@safetotan.com</a>
+      <a class="app-card" href="/sunflex/">
+        <div>
+          <p class="app-title">SunFlex</p>
+          <p class="app-desc">Sun exposure guidance and UV awareness tools.</p>
+        </div>
+        <div class="app-link">Open →</div>
+      </a>
     </div>
   </main>
 
   <footer>
-    © 2025 SunFlex. All rights reserved.
+    © 2026 Koi Developments. All rights reserved.
   </footer>
-
 </body>
 </html>
