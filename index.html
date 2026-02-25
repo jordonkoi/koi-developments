@@ -87,6 +87,9 @@
     }
 
     .hero-eyebrow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       font-size: 12px;
       letter-spacing: 0.18em;
       text-transform: uppercase;
@@ -119,10 +122,6 @@
       border: 1px solid #e5e5e5;
       border-radius: 16px;
       background: #fff;
-    }
-
-    .app-row.reverse {
-      grid-template-columns: 1fr 1.1fr;
     }
 
     .app-meta {
@@ -163,60 +162,60 @@
       gap: 6px;
     }
 
-    .phone-stack {
-      position: relative;
-      height: 240px;
+    .carousel {
       border-radius: 18px;
       background: linear-gradient(180deg, #fafafa, #f1f1f1);
       border: 1px solid #ededed;
-      overflow: hidden;
+      padding: 18px;
+      overflow-x: auto;
       display: grid;
-      place-items: center;
+      grid-auto-flow: column;
+      grid-auto-columns: 160px;
+      gap: 14px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
     }
 
-    .phone {
-      position: absolute;
-      width: 150px;
-      height: 210px;
+    .carousel::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .carousel::-webkit-scrollbar-thumb {
+      background: #d8d8d8;
+      border-radius: 999px;
+    }
+
+    .phone-frame {
+      scroll-snap-align: start;
       border-radius: 26px;
       background: #111;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
+      padding: 6px;
       display: grid;
       place-items: center;
       border: 2px solid #1a1a1a;
     }
 
-    .phone::before {
-      content: "";
-      width: 92%;
-      height: 90%;
+    .phone-frame img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      display: block;
+      background: #000;
+    }
+
+    .phone-placeholder {
+      height: 280px;
+      width: 150px;
       border-radius: 20px;
       background: linear-gradient(160deg, #2a2a2a, #0f0f0f);
-      display: block;
-    }
-
-    .phone.center {
-      transform: translateY(-6px);
-      z-index: 3;
-    }
-
-    .phone.left {
-      transform: translateX(-70px) rotate(-10deg) scale(0.92);
-      opacity: 0.9;
-      z-index: 2;
-    }
-
-    .phone.right {
-      transform: translateX(70px) rotate(10deg) scale(0.92);
-      opacity: 0.9;
-      z-index: 2;
-    }
-
-    .phone-label {
-      position: absolute;
-      bottom: 12px;
+      display: grid;
+      place-items: center;
+      color: #bdbdbd;
       font-size: 12px;
-      color: #777;
+      text-align: center;
+      padding: 10px;
+      line-height: 1.4;
     }
 
     .contact-list {
@@ -242,8 +241,7 @@
         grid-template-columns: 1fr;
       }
 
-      .app-row,
-      .app-row.reverse {
+      .app-row {
         grid-template-columns: 1fr;
       }
     }
@@ -268,10 +266,11 @@
   <main>
     <section class="hero">
       <div>
-        <p class="hero-eyebrow">KOI Ventures</p>
-        <h1>KOI Ventures Pty Ltd</h1>
+        <p class="hero-eyebrow">
+          <span>Koi Ventures Pty Ltd</span>
+          <span>Made in Australia</span>
+        </p>
         <p class="subtitle">Independent apps and experiences built with care.</p>
-        <p class="legal-desc">KOI Ventures Pty Ltd is an Australian software company building independent iOS applications focused on productivity, health, and lifestyle tools.</p>
       </div>
 
       <div class="hero-graphic" aria-hidden="true">
@@ -291,35 +290,61 @@
 
     <section class="section">
       <h2>About KOI Ventures</h2>
+      <p>KOI Ventures Pty Ltd is an Australian software company building independent iOS applications focused on productivity, health, and lifestyle tools.</p>
       <p>We design and develop thoughtfully crafted mobile applications for the Apple ecosystem. Our mission is to build tools that support growth, productivity, and healthier lifestyles.</p>
     </section>
 
     <section class="apps" aria-label="Apps">
       <div class="app-row">
         <div class="app-meta">
+          <h3 class="app-name">Momento</h3>
+          <p class="app-desc">Countdown tracker and widgets for life’s moments.</p>
+          <a class="app-cta" href="momento/">View app →</a>
+        </div>
+        <div class="carousel" aria-label="Momento screenshots">
+          <div class="phone-frame">
+            <img src="assets/image1.png" alt="Momento screenshot 1" />
+          </div>
+          <div class="phone-frame">
+            <img src="assets/image2.png" alt="Momento screenshot 2" />
+          </div>
+          <div class="phone-frame">
+            <img src="assets/image3.png" alt="Momento screenshot 3" />
+          </div>
+          <div class="phone-frame">
+            <img src="assets/image4.png" alt="Momento screenshot 4" />
+          </div>
+          <div class="phone-frame">
+            <img src="assets/image5.png" alt="Momento screenshot 5" />
+          </div>
+          <div class="phone-frame">
+            <img src="assets/image6.png" alt="Momento screenshot 6" />
+          </div>
+          <div class="phone-frame">
+            <img src="assets/image7.png" alt="Momento screenshot 7" />
+          </div>
+          <div class="phone-frame">
+            <img src="assets/image8.png" alt="Momento screenshot 8" />
+          </div>
+        </div>
+      </div>
+
+      <div class="app-row">
+        <div class="app-meta">
           <h3 class="app-name">SunFlex</h3>
           <p class="app-desc">Sun exposure guidance and UV awareness tools.</p>
           <a class="app-cta" href="sunflex/">View app →</a>
         </div>
-        <div class="phone-stack" aria-hidden="true">
-          <div class="phone left"></div>
-          <div class="phone center"></div>
-          <div class="phone right"></div>
-          <span class="phone-label">Screenshots coming soon</span>
-        </div>
-      </div>
-
-      <div class="app-row reverse">
-        <div class="phone-stack" aria-hidden="true">
-          <div class="phone left"></div>
-          <div class="phone center"></div>
-          <div class="phone right"></div>
-          <span class="phone-label">Screenshots coming soon</span>
-        </div>
-        <div class="app-meta">
-          <h3 class="app-name">Momento</h3>
-          <p class="app-desc">Countdown tracker and widgets for life’s moments.</p>
-          <a class="app-cta" href="momento/">View app →</a>
+        <div class="carousel" aria-label="SunFlex screenshots">
+          <div class="phone-frame">
+            <div class="phone-placeholder">Screenshots<br />coming soon</div>
+          </div>
+          <div class="phone-frame">
+            <div class="phone-placeholder">Screenshots<br />coming soon</div>
+          </div>
+          <div class="phone-frame">
+            <div class="phone-placeholder">Screenshots<br />coming soon</div>
+          </div>
         </div>
       </div>
 
@@ -329,11 +354,16 @@
           <p class="app-desc">Walking plans and gentle motivation for daily movement.</p>
           <span class="app-status">In progress</span>
         </div>
-        <div class="phone-stack" aria-hidden="true">
-          <div class="phone left"></div>
-          <div class="phone center"></div>
-          <div class="phone right"></div>
-          <span class="phone-label">In progress</span>
+        <div class="carousel" aria-label="WalkMor screenshots">
+          <div class="phone-frame">
+            <div class="phone-placeholder">In progress</div>
+          </div>
+          <div class="phone-frame">
+            <div class="phone-placeholder">In progress</div>
+          </div>
+          <div class="phone-frame">
+            <div class="phone-placeholder">In progress</div>
+          </div>
         </div>
       </div>
     </section>
