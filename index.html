@@ -168,12 +168,14 @@
       border: 1px solid #ededed;
       padding: 18px;
       overflow-x: auto;
+      overflow-y: hidden;
       display: grid;
       grid-auto-flow: column;
       grid-auto-columns: 190px;
       gap: 14px;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
+      min-height: 400px;
     }
 
     .carousel::-webkit-scrollbar {
@@ -188,12 +190,12 @@
     .phone-frame {
       scroll-snap-align: start;
       border-radius: 26px;
-      background: #111;
+      background: transparent;
       box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
-      padding: 6px;
+      padding: 0;
       display: grid;
       place-items: center;
-      border: 2px solid #1a1a1a;
+      border: 0;
       width: 190px;
       height: 360px;
     }
@@ -261,6 +263,11 @@
       h2 {
         font-size: 18px;
       }
+
+      .hero-eyebrow {
+        font-size: 10px;
+        letter-spacing: 0.12em;
+      }
     }
   </style>
 </head>
@@ -273,7 +280,6 @@
           <span>Koi Ventures Pty Ltd</span>
           <span>Made in Australia</span>
         </p>
-        <p class="subtitle">Independent apps and experiences built with care.</p>
       </div>
 
       <div class="hero-graphic" aria-hidden="true">
