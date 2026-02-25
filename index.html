@@ -129,6 +129,27 @@
       gap: 10px;
     }
 
+    .app-header {
+      display: grid;
+      gap: 10px;
+    }
+
+    .app-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      object-fit: cover;
+      background: #f0f0f0;
+    }
+
+    .app-icon.placeholder {
+      display: grid;
+      place-items: center;
+      font-size: 10px;
+      color: #888;
+    }
+
     .app-name {
       font-size: 24px;
       margin: 0;
@@ -166,7 +187,7 @@
       border-radius: 18px;
       background: linear-gradient(180deg, #fafafa, #f1f1f1);
       border: 1px solid #ededed;
-      padding: 18px;
+      padding: 24px;
       overflow-x: auto;
       overflow-y: hidden;
       display: grid;
@@ -306,8 +327,11 @@
     <section class="apps" aria-label="Apps">
       <div class="app-row">
         <div class="app-meta">
-          <h3 class="app-name">Momento</h3>
-          <p class="app-desc">Countdown tracker and widgets for life’s moments.</p>
+          <div class="app-header">
+            <img class="app-icon" src="assets/icon-1024x1024@1x.png" alt="Momento icon" />
+            <h3 class="app-name">Momento</h3>
+          </div>
+          <p class="app-desc">Track your year and life’s milestones with clean progress grids, countdowns, and widgets. Fast, private, and distraction-free.</p>
           <a class="app-cta" href="momento/">View app →</a>
         </div>
         <div class="carousel" aria-label="Momento screenshots">
@@ -340,7 +364,10 @@
 
       <div class="app-row">
         <div class="app-meta">
-          <h3 class="app-name">SunFlex</h3>
+          <div class="app-header">
+            <div class="app-icon placeholder">Icon</div>
+            <h3 class="app-name">SunFlex</h3>
+          </div>
           <p class="app-desc">Sun exposure guidance and UV awareness tools.</p>
           <a class="app-cta" href="sunflex/">View app →</a>
         </div>
@@ -359,7 +386,10 @@
 
       <div class="app-row">
         <div class="app-meta">
-          <h3 class="app-name">WalkMor</h3>
+          <div class="app-header">
+            <div class="app-icon placeholder">Icon</div>
+            <h3 class="app-name">WalkMor</h3>
+          </div>
           <p class="app-desc">Walking plans and gentle motivation for daily movement.</p>
           <span class="app-status">In progress</span>
         </div>
