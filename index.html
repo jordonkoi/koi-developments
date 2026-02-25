@@ -31,10 +31,43 @@
       letter-spacing: -0.01em;
     }
 
+    h2 {
+      font-size: 20px;
+      margin: 0 0 8px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
     .subtitle {
       font-size: 16px;
       color: #333;
       margin: 0 0 28px;
+    }
+
+    .legal-desc {
+      margin: -16px 0 24px;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .section {
+      margin: 28px 0 0;
+    }
+
+    .section p {
+      margin: 0;
+      color: #333;
+      font-size: 15px;
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 6px;
+      font-size: 15px;
+      color: #333;
     }
 
     .apps {
@@ -96,6 +129,10 @@
         font-size: 28px;
       }
 
+      h2 {
+        font-size: 18px;
+      }
+
       .app-card {
         flex-direction: column;
         align-items: flex-start;
@@ -106,8 +143,14 @@
 
 <body>
   <main>
-    <h1>Koi Developments</h1>
+    <h1>KOI Ventures Pty Ltd</h1>
     <p class="subtitle">Independent apps and experiences built with care.</p>
+    <p class="legal-desc">KOI Ventures Pty Ltd is an Australian software company building independent iOS applications focused on productivity, health, and lifestyle tools.</p>
+
+    <section class="section">
+      <h2>About KOI Ventures</h2>
+      <p>We design and develop thoughtfully crafted mobile applications for the Apple ecosystem. Our mission is to build tools that support growth, productivity, and healthier lifestyles.</p>
+    </section>
 
     <div class="apps">
       <a class="app-card" href="momento/">
@@ -126,10 +169,21 @@
         <div class="app-link">Open →</div>
       </a>
     </div>
+
+    <section class="section">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li>Business email: contact@koiventures.com</li>
+        <li>Location: Melbourne, Australia</li>
+        <li>ABN: XX XXX XXX XXX</li>
+      </ul>
+    </section>
   </main>
 
   <footer>
-    © 2026 Koi Developments. All rights reserved.
+    KOI Ventures Pty Ltd · Melbourne, Australia · contact@koiventures.com
+    <br />
+    © 2026 KOI Ventures Pty Ltd. All rights reserved.
   </footer>
 </body>
 </html>
