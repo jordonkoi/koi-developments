@@ -44,12 +44,6 @@
       margin: 0 0 28px;
     }
 
-    .legal-desc {
-      margin: -16px 0 24px;
-      font-size: 15px;
-      color: #333;
-    }
-
     .hero {
       display: grid;
       grid-template-columns: 1fr;
@@ -60,10 +54,30 @@
 
     .hero-graphic {
       display: grid;
-      grid-template-columns: repeat(3, 84px);
-      grid-auto-rows: 84px;
+      grid-template-columns: repeat(3, 96px);
+      grid-auto-rows: 96px;
       gap: 10px;
       justify-content: center;
+    }
+
+    .hero-title {
+      font-size: 40px;
+      margin: 18px 0 8px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-subtitle {
+      font-size: 18px;
+      color: #333;
+      margin: 0 0 10px;
+    }
+
+    .hero-desc {
+      font-size: 15px;
+      color: #444;
+      margin: 0;
+      max-width: 520px;
     }
 
     .hero-tile {
@@ -277,10 +291,6 @@
         padding: 40px 16px 56px;
       }
 
-      h1 {
-        font-size: 30px;
-      }
-
       h2 {
         font-size: 18px;
       }
@@ -288,6 +298,14 @@
       .hero-eyebrow {
         font-size: 10px;
         letter-spacing: 0.12em;
+      }
+
+      .hero-title {
+        font-size: 30px;
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
       }
     }
   </style>
@@ -301,6 +319,9 @@
           <span>Koi Ventures Pty Ltd</span>
           <span>Made in Australia</span>
         </p>
+        <h1 class="hero-title">Thoughtful Apps</h1>
+        <p class="hero-subtitle">Independent iOS studio</p>
+        <p class="hero-desc">We build focused tools for productivity, health, and lifestyle—designed to be simple, fast, and useful.</p>
       </div>
 
       <div class="hero-graphic" aria-hidden="true">
