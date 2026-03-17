@@ -8,347 +8,112 @@
   <link rel="icon" href="favicon-32-v2.png" sizes="32x32" type="image/png" />
   <link rel="icon" href="favicon-16-v2.png" sizes="16x16" type="image/png" />
   <link rel="apple-touch-icon" href="apple-touch-icon-v2.png" />
-
-  <style>
-    * {
-      box-sizing: border-box;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    }
-
-    body {
-      margin: 0;
-      background: #ffffff;
-      color: #111;
-      line-height: 1.6;
-    }
-
-    main {
-      max-width: 1040px;
-      margin: 0 auto;
-      padding: 56px 20px 72px;
-    }
-
-    h1 {
-      font-size: 40px;
-      margin: 18px 0 10px;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-    }
-
-    h2 {
-      font-size: 22px;
-      margin: 0 0 8px;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-    }
-
-    .subtitle {
-      font-size: 17px;
-      color: #333;
-      margin: 0 0 28px;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 28px;
-      align-items: center;
-      margin-bottom: 36px;
-    }
-
-    .hero-graphic {
-      display: grid;
-      grid-template-columns: repeat(3, 96px);
-      grid-auto-rows: 96px;
-      gap: 10px;
-      justify-content: center;
-    }
-
-    .hero-title {
-      font-size: 40px;
-      margin: 18px 0 8px;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-    }
-
-    .hero-subtitle {
-      font-size: 18px;
-      color: #333;
-      margin: 0 0 10px;
-    }
-
-    .hero-desc {
-      font-size: 15px;
-      color: #444;
-      margin: 0;
-      max-width: 520px;
-    }
-
-    .hero-tile {
-      border-radius: 16px;
-      background: #f2f2f2;
-      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-    }
-
-    .hero-tile.primary {
-      background: #f2f2f2;
-    }
-
-    .hero-icon {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 16px;
-    }
-
-    .hero-eyebrow {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 12px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #777;
-      margin: 0 0 6px;
-    }
-
-    .section {
-      margin: 28px 0 0;
-    }
-
-    .section p {
-      margin: 0;
-      color: #333;
-      font-size: 15px;
-    }
-
-    .apps {
-      display: grid;
-      gap: 18px;
-      margin-top: 22px;
-    }
-
-    .app-row {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 22px;
-      align-items: center;
-      padding: 22px;
-      border: 1px solid #e5e5e5;
-      border-radius: 16px;
-      background: #fff;
-    }
-
-    .app-meta {
-      display: grid;
-      gap: 10px;
-    }
-
-    .app-header {
-      display: grid;
-      gap: 10px;
-    }
-
-    .app-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-      object-fit: cover;
-      background: #f0f0f0;
-    }
-
-    .app-icon.placeholder {
-      display: grid;
-      place-items: center;
-      font-size: 10px;
-      color: #888;
-    }
-
-    .app-name {
-      font-size: 24px;
-      margin: 0;
-      font-weight: 650;
-    }
-
-    .app-desc {
-      font-size: 15px;
-      color: #444;
-      margin: 0;
-    }
-
-    .app-status {
-      font-size: 13px;
-      color: #666;
-      background: #f4f4f4;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 10px;
-      border-radius: 999px;
-      width: fit-content;
-      text-decoration: none;
-    }
-
-    .app-cta {
-      font-size: 14px;
-      color: #0066cc;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .carousel {
-      border-radius: 18px;
-      background: linear-gradient(180deg, #fafafa, #f1f1f1);
-      border: 1px solid #ededed;
-      padding: 18px;
-      overflow-x: auto;
-      overflow-y: hidden;
-      display: grid;
-      grid-auto-flow: column;
-      grid-auto-columns: 190px;
-      gap: 14px;
-      scroll-snap-type: x mandatory;
-      scroll-padding: 18px;
-      -webkit-overflow-scrolling: touch;
-      min-height: 400px;
-    }
-
-    .carousel::-webkit-scrollbar {
-      height: 6px;
-    }
-
-    .carousel::-webkit-scrollbar-thumb {
-      background: #d8d8d8;
-      border-radius: 999px;
-    }
-
-    .phone-frame {
-      scroll-snap-align: start;
-      border-radius: 26px;
-      background: transparent;
-      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
-      padding: 0;
-      display: grid;
-      place-items: center;
-      border: 0;
-      width: 190px;
-      height: 400px;
-    }
-
-    .phone-frame img {
-      width: 100%;
-      height: 100%;
-      border-radius: 20px;
-      display: block;
-      background: #000;
-      object-fit: contain;
-    }
-
-    .phone-placeholder {
-      height: 100%;
-      width: 100%;
-      border-radius: 20px;
-      background: linear-gradient(160deg, #2a2a2a, #0f0f0f);
-      display: grid;
-      place-items: center;
-      color: #bdbdbd;
-      font-size: 12px;
-      text-align: center;
-      padding: 10px;
-      line-height: 1.4;
-    }
-
-    .contact-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 6px;
-      font-size: 15px;
-      color: #333;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 12px;
-      color: #666;
-      padding: 24px 16px;
-      border-top: 1px solid #eee;
-    }
-
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-
-      .app-row {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 480px) {
-      main {
-        padding: 40px 16px 56px;
-      }
-
-      h2 {
-        font-size: 18px;
-      }
-
-      .hero-eyebrow {
-        font-size: 10px;
-        letter-spacing: 0.12em;
-      }
-
-      .hero-title {
-        font-size: 30px;
-      }
-
-      .hero-subtitle {
-        font-size: 16px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/theme.css" />
 </head>
 
-<body>
+<body class="home-page">
+  <header class="site-nav">
+    <nav class="site-nav-inner" aria-label="Primary">
+      <ul class="nav-links nav-links-left">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+              </ul>
+    </nav>
+  </header>
   <main>
-    <section class="hero">
-      <div>
+    <section class="hero" id="home">
+      <div class="hero-inner">
+      <div class="hero-copy">
         <p class="hero-eyebrow">
-          <span>Koi Ventures Pty Ltd</span>
-          <span>Made in Australia</span>
+          <span>WELCOME TO KOI DEVELOPMENTS</span>
         </p>
-        <h1 class="hero-title">Thoughtful Apps</h1>
+        <h1 class="hero-title">Thoughtful Apps for everyday life</h1>
         <p class="hero-subtitle">Koi Developments Studio</p>
-        <p class="hero-desc">We build focused tools for productivity, health, and lifestyle—designed to be simple, fast, and useful.</p>
+        <p class="hero-desc">We build focused tools for productivity, health, and lifestyle. Clean products, fast performance, and practical experiences.</p>
       </div>
 
-      <div class="hero-graphic" aria-hidden="true">
-        <div class="hero-tile primary">
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-blob"></div>
+        <div class="floating-app app-main">
           <img class="hero-icon" src="assets/icon-1024x1024@1x.png" alt="" />
         </div>
-        <div class="hero-tile"></div>
-        <div class="hero-tile"></div>
-        <div class="hero-tile"></div>
-        <div class="hero-tile"></div>
-        <div class="hero-tile"></div>
-        <div class="hero-tile"></div>
-        <div class="hero-tile"></div>
-        <div class="hero-tile"></div>
+        <div class="floating-app app-1">
+          <img class="hero-icon sunflex-icon" src="assets/sunflex-icon.png" alt="" />
+        </div>
+        <div class="floating-app app-2"></div>
+        <div class="floating-app app-3"></div>
+        <div class="floating-app app-4"></div>
+        <div class="floating-app app-5"></div>
+      </div>
       </div>
     </section>
 
-    <section class="section">
-      <h2>About KOI Ventures</h2>
-      <p>KOI Ventures Pty Ltd is an Australian software company building independent iOS applications focused on productivity, health, and lifestyle tools.</p>
-      <p>We design and develop thoughtfully crafted mobile applications for the Apple ecosystem. Our mission is to build tools that support growth, productivity, and healthier lifestyles.</p>
+
+    <section class="metrics-row" aria-label="Portfolio Metrics">
+      <article class="metric-item">
+        <p class="metric-value">--</p>
+        <p class="metric-label">TOTAL APP DOWNLOADS</p>
+      </article>
+      <article class="metric-item">
+        <p class="metric-value">--</p>
+        <p class="metric-label">AVERAGE APP STORE RATING</p>
+      </article>
+      <article class="metric-item">
+        <p class="metric-value">--</p>
+        <p class="metric-label">MONTHLY ACTIVE USERS</p>
+      </article>
+    </section>
+
+    <section class="about-showcase" id="about" aria-label="About Koi Developments">
+      <h2>About Koi Developments</h2>
+      <div class="about-tiles">
+        <article class="about-tile">
+          <div class="about-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="4"/>
+              <path d="M4 20c1.8-3.2 4.5-4.8 8-4.8s6.2 1.6 8 4.8"/>
+            </svg>
+          </div>
+          <h3>About</h3>
+          <p>Koi Developments is an Australian studio building independent apps for productivity, health, and lifestyle.</p>
+        </article>
+        <article class="about-tile">
+          <div class="about-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M12 7v5l3 3"/>
+            </svg>
+          </div>
+          <h3>Mission</h3>
+          <p>Build focused products that are fast, practical, and genuinely useful in everyday life.</p>
+        </article>
+        <article class="about-tile">
+          <div class="about-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 15.8 7.2 18l.9-5.4L4.2 8.7l5.4-.8L12 3z"/>
+            </svg>
+          </div>
+          <h3>Craft</h3>
+          <p>We design for clarity first, with simple interfaces, strong performance, and thoughtful details.</p>
+        </article>
+        <article class="about-tile">
+          <div class="about-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l7 3v5c0 4.8-3 8.2-7 10-4-1.8-7-5.2-7-10V6l7-3z"/>
+              <path d="M9.5 12.5l1.8 1.8 3.4-3.4"/>
+            </svg>
+          </div>
+          <h3>Trust</h3>
+          <p>Every app includes clear legal pages and transparent policies for privacy and terms.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="portfolio-intro" id="portfolio" aria-label="Portfolio Intro">
+      <h2>Portfolio</h2>
+      <p>Explore our apps, product pages, and legal resources.</p>
     </section>
 
     <section class="apps" aria-label="Apps">
@@ -359,7 +124,7 @@
             <h3 class="app-name">Momento</h3>
           </div>
           <p class="app-desc">Track your year and life’s milestones with clean progress grids, countdowns, and widgets. Fast, private, and distraction-free.</p>
-          <a class="app-cta" href="momento/">View app →</a>
+          <a class="app-cta" href="momento/index.html">View app →</a>
         </div>
         <div class="carousel" aria-label="Momento screenshots">
           <div class="phone-frame">
@@ -392,7 +157,7 @@
       <div class="app-row">
         <div class="app-meta">
           <div class="app-header">
-            <div class="app-icon placeholder">Icon</div>
+            <img class="app-icon sunflex-icon" src="assets/sunflex-icon.png" alt="SunFlex icon" />
             <h3 class="app-name">SunFlex</h3>
           </div>
           <p class="app-desc">Sun exposure guidance and UV awareness tools.</p>
@@ -434,20 +199,91 @@
       </div>
     </section>
 
-    <section class="section">
-      <h2>Contact</h2>
-      <ul class="contact-list">
-        <li>Business email: contact@koidevelopments.com</li>
-        <li>Location: Melbourne, Australia</li>
-        <li>ABN: 59 693 121 470</li>
-      </ul>
-    </section>
   </main>
 
-  <footer>
+  <footer id="contact">
     KOI Ventures Pty Ltd · Melbourne, Australia · contact@koidevelopments.com
     <br />
     © 2026 KOI Ventures Pty Ltd. All rights reserved.
   </footer>
+  <script>
+    (() => {
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      window.addEventListener('load', () => {
+        window.scrollTo(0, 0);
+        if (window.location.hash) history.replaceState(null, '', window.location.pathname + window.location.search);
+      });
+
+      const nav = document.querySelector('.site-nav');
+      const ENTER_SCROLL_Y = 72;
+      const EXIT_SCROLL_Y = 28;
+
+      const setNavMotion = (stateClass) => {
+        if (!nav) return;
+        nav.classList.remove('is-expanding', 'is-collapsing');
+        nav.classList.add(stateClass);
+      };
+
+      const setNavState = () => {
+        if (!nav) return;
+        const isScrolled = nav.classList.contains('scrolled');
+        if (!isScrolled && window.scrollY > ENTER_SCROLL_Y) {
+          setNavMotion('is-expanding');
+          nav.classList.add('scrolled');
+        } else if (isScrolled && window.scrollY < EXIT_SCROLL_Y) {
+          setNavMotion('is-collapsing');
+          nav.classList.remove('scrolled');
+        }
+      };
+      setNavState();
+      window.addEventListener('scroll', setNavState, { passive: true });
+
+      const links = document.querySelectorAll('.site-nav a[href^="#"]');
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      const easeInOutCubic = (t) =>
+        t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+      const smoothScrollTo = (targetY, duration = 2400) => {
+        const startY = window.scrollY;
+        const distance = targetY - startY;
+        const start = performance.now();
+
+        const step = (now) => {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = easeInOutCubic(progress);
+          window.scrollTo(0, startY + distance * eased);
+          if (progress < 1) requestAnimationFrame(step);
+        };
+
+        requestAnimationFrame(step);
+      };
+
+      links.forEach((link) => {
+        link.addEventListener('click', (e) => {
+          const href = link.getAttribute('href');
+          if (!href || href === '#') return;
+
+          const target = document.querySelector(href);
+          if (!target) return;
+
+          e.preventDefault();
+
+          const navOffset = 96;
+          const targetY = target.getBoundingClientRect().top + window.scrollY - navOffset;
+
+          if (prefersReducedMotion) {
+            window.scrollTo(0, targetY);
+          } else {
+            smoothScrollTo(targetY, 2500);
+          }
+
+        });
+      });
+
+    })();
+  </script>
+
 </body>
 </html>
